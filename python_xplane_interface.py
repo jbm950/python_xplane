@@ -32,6 +32,12 @@ class Xplane_connection:
              connections menu)
         """
 
+        # Test that the x-plane ip address is different than the ip address of
+        # the python program
+        assert (socket.gethostbyname(socket.gethostname()) != xplane_ip_addr),"""X
+        -Plane refuses to send data to its own ip address and so a different ip
+         address will be needed."""
+
         # Set up the sockets for sending and recieving data from xplane
         # x for xplane h for host
         self.xUDP_IP = xplane_ip_addr
