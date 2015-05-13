@@ -20,7 +20,8 @@ class Xplane_connection:
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Inputs:
             xplane_ip_addr - This is a string of the ip address of the computer
-                that xplane is being run on.
+                that xplane is being run on (needs to be a different computer
+                than the one running python code).
 
             xplane_port - This is the port that xplane is listening to for
                 recieving data.
