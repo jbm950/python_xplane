@@ -86,7 +86,8 @@ plt.show()
 
 ##
 ### Test with x-plane
-##xp_inter = pxi.Xplane_connection('128.206.20.1',49000,49001)
+### Need to make sure that the ip address and send/recieve ports match your setup
+##xp_inter = pxi.Xplane_connection('xplane ip address',49000,49001)
 ##
 ##runtime = 30
 ##start = time.time()
