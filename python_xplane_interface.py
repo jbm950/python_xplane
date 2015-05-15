@@ -95,8 +95,11 @@ class Xplane_connection:
 
 if __name__ == '__main__':
 
-    # Initialize the connection
-    xp_inter = Xplane_connection('128.206.20.1',49000,49001)
+    # Initialize the connection (put in your ip address and xplane send recieve ports)
+    ip_address = 'xplanes ip address'
+    xplane_port = 49000
+    recieve_port = 49001
+    xp_inter = Xplane_connection(ip_address,xplane_port,recieve_port)
 
     # Test Sending a Message
     throt_command = struct.pack('ifxxxxxxxxxxxxxxxxxxxxxxxxxxxx',25,0.5)
