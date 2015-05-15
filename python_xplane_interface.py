@@ -81,8 +81,8 @@ class Xplane_connection:
         self.xsock.sendto(message, (self.xUDP_IP, self.xUDP_PORT))
 
     def level_flight(self):
-        """Not Currently Working. If paused it will the euler angles will go to zero
-           but as soon as it is unpaused it will return to initial position"""
+        """Not Currently Working. If paused, the euler angles will go to zero
+           but as soon as it is unpaused it will return to their pre-pause values"""
 
         # Initialize the message setting the euler angles to zero and send to
         # xplane
