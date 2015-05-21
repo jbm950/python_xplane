@@ -89,6 +89,13 @@ class Xplane_connection:
         message = b'DATA@\x11\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
         self.xsock.sendto(message, (self.xUDP_IP, self.xUDP_PORT))
 
+    def close(self):
+        """This method will close both of the open sockets."""
+
+        # Close both sockets
+        self.xsock.close()
+        self.hsock.close()
+
 # Self Test Code
 #   NOTE: The ip address and ports need to be changed to match your current
 #   setup.
@@ -113,5 +120,8 @@ if __name__ == '__main__':
 
     # Test Recieving a Message
     print(xp_inter.recieve())
+
+    # Close the connections
+    xp_inter.close()
 
 
