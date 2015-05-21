@@ -118,7 +118,7 @@ plt.show()
 ##
 ##plt.show()
 ##
-##
+##xp_inter.close()
 
 
 
