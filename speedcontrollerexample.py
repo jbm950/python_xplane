@@ -84,41 +84,43 @@ plt.title('Throttle Commands vs. Airspeeds')
 plt.legend(('Throttle Commands','Too Slow','Slow','Cruise','Fast','Too Fast'),bbox_to_anchor=(1.05, 1),loc=2, borderaxespad=0.)
 plt.show()
 
-##
+
 ### Test with x-plane
 ### Need to make sure that the ip address and send/recieve ports match your setup
 ##xp_inter = pxi.Xplane_connection('xplane ip address',49000,49001)
 ##
-##runtime = 30
-##start = time.time()
+##try:
+##    runtime = 30
+##    start = time.time()
 ##
-##speeds = []
-##commands = []
-##timeofsim = []
+##    speeds = []
+##    commands = []
+##    timeofsim = []
 ##
-##while start + runtime > time.time():
-##   speed = xp_inter.recieve()[1]
-##   speeds.append(speed)
-##   throt_command = throttle_command(speed)
-##   commands.append(throt_command)
-##   message = struct.pack('ifxxxxxxxxxxxxxxxxxxxxxxxxxxxx',25,throt_command)
-##   xp_inter.send(message)
-##   timeofsim.append(time.time() - start)
+##    while start + runtime > time.time():
+##       speed = xp_inter.recieve()[1]
+##       speeds.append(speed)
+##       throt_command = throttle_command(speed)
+##       commands.append(throt_command)
+##       message = struct.pack('ifxxxxxxxxxxxxxxxxxxxxxxxxxxxx',25,throt_command)
+##       xp_inter.send(message)
+##       timeofsim.append(time.time() - start)
 ##
-##plt.subplot(2,1,1)
-##plt.plot(timeofsim,speeds)
-##plt.title('Speeds over time')
-##plt.ylabel('Speed')
+##    plt.subplot(2,1,1)
+##    plt.plot(timeofsim,speeds)
+##    plt.title('Speeds over time')
+##    plt.ylabel('Speed')
 ##
-##plt.subplot(2,1,2)
-##plt.plot(timeofsim,commands)
-##plt.title('Throttle Commands over time')
-##plt.ylabel('Throttle Command')
-##plt.xlabel('Time of Simulation (s)')
+##    plt.subplot(2,1,2)
+##    plt.plot(timeofsim,commands)
+##    plt.title('Throttle Commands over time')
+##    plt.ylabel('Throttle Command')
+##    plt.xlabel('Time of Simulation (s)')
 ##
-##plt.show()
+##    plt.show()
 ##
-##xp_inter.close()
+##finally:
+##    xp_inter.close()
 
 
 
